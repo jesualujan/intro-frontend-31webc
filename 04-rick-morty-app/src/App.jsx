@@ -7,12 +7,12 @@ import './App.css'
 function App () {
   // LÓGICA DEL COMPONENTE , EL ESTADO Y LA LLAMADA A LA API
   //* Estado del componente
-  // camelCase
+  // camelCase: funciones, métodos o variables
   const [character, setCharacter] = useState([]) // el estado inicia vacío
   const [info, setInfo] = useState({}) // el estado inicia vacío
 
   // DEFINIR MI ENDPOINT:
-  // SNAKE_UPPERCASE
+  // SNAKE_UPPERCASE: entornos globables
   const BASE_URL = 'https://rickandmortyapi.com/api/character'
 
   useEffect(() => {
