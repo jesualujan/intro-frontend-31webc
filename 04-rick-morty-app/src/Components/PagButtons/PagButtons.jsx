@@ -6,6 +6,7 @@ import './pagbuttons.css'
 const PagButtons = ({ handlePrevious, handleNext }) => {
   return (
     <>
+        { /* aplicando kebabcase para las clases de los componentes */}
       <ul className='pagination__buttons'>
         <li className='pagination__buttons-item'>
           <button onClick={handlePrevious}> prev </button>
