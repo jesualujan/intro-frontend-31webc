@@ -23,8 +23,9 @@ function App () {
     fetch(BASE_URL)
       .then((response) => response.json())
       .then((data) => {
-        setCharacter()
         console.log(data.info)
+        console.log(data.results)
+        setCharacter(data.results)
         setInfo(data.info)
       })
       .catch((error) => console.log('Algo salio mal', error))
@@ -45,7 +46,7 @@ function App () {
       <Navbar />
       <div>
         <PagButtons prev={info.prev} next={info.next} handlePrevious={onPrevious} handleNext={onNext} />
-        <Character />
+        <Character characterList={character} />
         <PagButtons prev={info.prev} next={info.next} handlePrevious={onPrevious} handleNext={onNext} />
       </div>
     </>
